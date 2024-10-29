@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Challenges - FitLife</title>
+    <link rel="stylesheet" href="GeneralStyle.css" />
+    <style>
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+
+        .box {
+            background-color: #EFEFEF;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .box h1 {
+            margin-top: -20px;
+            font-size: 50px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .box h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .challenge-form {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .challenge-form div {
+            margin-bottom: 40px;
+        }
+
+        .challenge-form label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .challenge-form input,
+        .challenge-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-container {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .challenge-form button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #3D68FA;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .challenge-form button:hover {
+            background-color: #2C4EB8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-container">
+        <h1><a href="home.html">FitLife</a></h1>
+        <nav>
+            <a href="aboutus.html">About Us</a>
+            <a href="products.html">Classes</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Challenges</h2>
+            <p>Participate in one of our fitness challenges!</p>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <main class="main-container">
+        <div class="box">
+            <h1>Current and</h1>
+            <h1>Upcoming Challenges</h1>
+
+            <div class="challenge-form">
+                <h2>Sign Up for a Challenge</h2>
+                <form id="challengeForm">
+                    <div>
+                        <label for="challenge-type">Select Challenge Type:</label>
+                        <select id="challenge-type" name="challengeType">
+                            <option value="" selected disabled>- Select a Challenge -</option>
+                            <option value="30-Day Fitness">30-Day Fitness</option>
+                            <option value="Yoga Beginner">Yoga Beginner</option>
+                            <option value="HIIT Challenge">HIIT Challenge</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date">Pick a Start Date:</label>
+                        <input type="date" id="date" name="startDate" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Accept Terms</label>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="button">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('challengeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Display pop-up message
+            alert("We will email you your first challenge shortly!");
+
+            // Clear all form fields
+            document.getElementById('challengeForm').reset();
+        });
+    </script>
+
+    <br><br>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <a href="aboutus.html">About Us</a>
+                <a href="products.html">Classes</a>
+                <a href="workouts.html">Workouts</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="challenge.html">Challenge</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 FitLife.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

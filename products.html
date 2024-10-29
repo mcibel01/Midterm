@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class Packages - FitLife</title>
+    <link rel="stylesheet" href="GeneralStyle.css" />
+    <style>
+        /* Class Packages Section Styles */
+        .class-packages {
+            padding: 40px;
+            background-color: #f8f8f8;
+        }
+
+        .class-packages h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 45px;
+        }
+
+        .package-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .package-card {
+            background-color: #5b81f5;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+
+        .package-card h3 {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f4f4f6;
+        }
+
+        .package-card .price {
+            font-size: 28px;
+            color: #FFFFFF;
+            margin: 10px 0;
+        }
+
+        .package-card .classes {
+            font-size: 20px;
+            color: #f4f4f6;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 15px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .error {
+            color: red;
+            margin-top: -5px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .modal-content button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3D68FA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #4FC3F7;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <h1><a href="home.html">FitLife</a></h1>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="aboutus.html">About Us</a>
+            <a href="products.html">Classes</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h2>Classes</h2>
+            <p>Buy one of our class packages!</p>
+        </div>
+    </section>
+
+    <!-- Class Packages -->
+    <main class="main">
+        <section class="class-packages">
+            <h2>Class Packages</h2>
+            <div class="package-cards">
+                <div class="package-card" onclick="openModal('Boston - 1 Class', 'US$33.00')">
+                    <h3>Boston - 1 Class</h3>
+                    <p class="price">US$33.00</p>
+                    <p class="classes">1 class</p>
+                </div>
+
+                <div class="package-card" onclick="openModal('Boston - 5 Classes', 'US$160.00')">
+                    <h3>Boston - 5 Classes</h3>
+                    <p class="price">US$160.00</p>
+                    <p class="classes">5 classes</p>
+                </div>
+
+                <div class="package-card" onclick="openModal('Boston - 10 Classes', 'US$315.00')">
+                    <h3>Boston - 10 Classes</h3>
+                    <p class="price">US$315.00</p>
+                    <p class="classes">10 classes</p>
+                </div>
+
+                <div class="package-card" onclick="openModal('Boston - 20 Classes', 'US$610.00')">
+                    <h3>Boston - 20 Classes</h3>
+                    <p class="price">US$610.00</p>
+                    <p class="classes">20 classes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Checkout</h2>
+            <p id="selectedPackage"></p>
+            <input type="text" id="name" placeholder="Name">
+            <div id="nameError" class="error">Please enter your name.</div>
+            <input type="text" id="creditCard" placeholder="Credit Card Number">
+            <div id="cardError" class="error">Please enter a valid credit card number.</div>
+            <button onclick="submitPurchase()">Complete Purchase</button>
+        </div>
+    </div>
+
+    <script>
+        // Open the checkout modal with selected package details
+        function openModal(packageName, packagePrice) {
+            document.getElementById('selectedPackage').innerText = `${packageName} - ${packagePrice}`;
+            document.getElementById('checkoutModal').style.display = 'flex';
+        }
+
+        // Validate inputs and complete the purchase
+        function submitPurchase() {
+            const name = document.getElementById('name').value;
+            const creditCard = document.getElementById('creditCard').value;
+            const nameError = document.getElementById('nameError');
+            const cardError = document.getElementById('cardError');
+            let isValid = true;
+
+            if (!name) {
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                nameError.style.display = 'none';
+            }
+
+            if (!creditCard || isNaN(creditCard) || creditCard.length < 12) {
+                cardError.style.display = 'block';
+                isValid = false;
+            } else {
+                cardError.style.display = 'none';
+            }
+
+            if (isValid) {
+                alert('Purchase completed successfully!');
+                document.getElementById('checkoutModal').style.display = 'none';
+            }
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('checkoutModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+
+        <footer class="footer">
+            <div class="footer-content">
+            <!-- Footer Navigation Links -->
+                <div class="footer-nav">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="products.html">Classes</a>
+                    <a href="workouts.html">Workouts</a>
+                    <a href="nutrition.html">Nutrition</a>
+                    <a href="challenge.html">Challenge</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+    
+                <!-- Copyright Info -->
+                <div class="footer-copy">
+                    <p>&copy; 2024 FitLife.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
