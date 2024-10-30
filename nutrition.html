@@ -1,121 +1,158 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="about us, fitness, instructors, team, FitLife">
-        <title>Nutrition | FitLife</title>
-        <link rel="stylesheet" href="GeneralStyle.css">
-        <style>
-            .blog-container {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 30px;
-                padding: 40px 20px;
-                background-color: #ffffff;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="about us, fitness, instructors, team, FitLife">
+    <title>Nutrition | FitLife</title>
+    <link rel="stylesheet" href="GeneralStyle.css">
+    <style>
+        .blog-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
 
-            .blog-card {
-                background-color: #f4f4f4;
-                width: 300px;
-                border-radius: 10px;
-                overflow: hidden;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                text-align: center;
-                cursor: pointer;
-            }
+        .blog-card {
+            background-color: #f4f4f4;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
 
-            .blog-card:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
+        .blog-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-            .blog-card img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                margin-bottom: 10px;
-            }
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
 
-            .blog-card h5 {
-                margin: 15px 0;
-                font-size: 22px;
-                font-weight: bold;
-                color: #333;
-            }
+        .blog-card h5 {
+            margin: 15px 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
 
-            .heading h2{
-                font-size: 40px;
-                text-align: center;
+        .heading h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-container">
+        <h1><a href="Home.html">FitLife</a></h1>
+        <nav>
+            <a href="aboutus.html">About Us</a>
+            <a href="products.html">Classes</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Nutrition</h2>
+            <p>Discover expert tips to fuel your fitness journey</p>
+        </div>
+    </section>
+
+    <div class="heading">
+        <h2>Our Nutrition Blog</h2>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-container" id="blogContainer"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Array of blog post objects
+        const blogPosts = [
+            {
+                title: "The Foundation of Nutrition for a Healthy Lifestyle",
+                image: "bgContact.webp",
+                link: "a1.html"
+            },
+            {
+                title: "Fitness: The Path to a Healthier You",
+                image: "bgContact.webp",
+                link: "a2.html"
+            },
+            {
+                title: "Integrating Nutrition and Fitness for Optimal Health",
+                image: "bgContact.webp",
+                link: "a3.html"
             }
-        </style>
-    </head>
-    <body>
-        <!-- Header Section -->
-        <header class="header-container">
-            <h1><a href="Home.html">FitLife</a></h1>
-            <nav>
+        ];
+
+        // Function to render blog posts
+        const renderBlogPosts = () => {
+            const blogContainer = document.getElementById('blogContainer');
+
+            blogPosts.forEach(post => {
+                // Create the blog card element
+                const blogCard = document.createElement('div');
+                blogCard.classList.add('blog-card');
+
+                // Create link wrapper
+                const link = document.createElement('a');
+                link.href = post.link;
+                link.target = '_blank';
+
+                // Create image element
+                const img = document.createElement('img');
+                img.src = post.image;
+                img.alt = `${post.title} image`;
+
+                // Create title element
+                const title = document.createElement('h5');
+                title.textContent = post.title;
+
+                // Append elements to the card
+                blogCard.appendChild(img);
+                blogCard.appendChild(title);
+                link.appendChild(blogCard);
+
+                // Append card to the container
+                blogContainer.appendChild(link);
+            });
+        };
+
+        // Call the function to render blog posts
+        renderBlogPosts();
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-nav">
                 <a href="aboutus.html">About Us</a>
                 <a href="products.html">Classes</a>
                 <a href="workouts.html">Workouts</a>
                 <a href="nutrition.html">Nutrition</a>
                 <a href="challenge.html">Challenge</a>
                 <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-
-        <!-- Banner Section -->
-        <section class="banner">
-            <div class="banner-content">
-                <h2>Nutrition</h2>
-                <p>Discover expert tips to fuel your fitness journey</p>
             </div>
-        </section>
-
-        <div class="heading">
-            <h2>Our Nutrition Blog</h2>
-        </div>
-
-        <!-- Blog Section -->
-        <div class="blog-container">
-            <a href="a1.html" target="_blank">
-                <div class="blog-card">
-                    <img src="bgContact.webp" alt="Nutrition blog image">
-                    <h5>The Foundation of Nutrition for a Healthy Lifestyle</h5>
-                </div>
-            </a>
-
-            <a href="a2.html" target="_blank">
-                <div class="blog-card">
-                    <img src="bgContact.webp" alt="Fitness blog image">
-                    <h5>Fitness: The Path to a Healthier You</h5>
-                </div>
-            </a>
-
-            <a href="a3.html" target="_blank">
-                <div class="blog-card">
-                    <img src="bgContact.webp" alt="Health blog image">
-                    <h5>Integrating Nutrition and Fitness for Optimal Health</h5>
-                </div>
-            </a>
-        </div>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-nav">
-                    <a href="aboutus.html">About Us</a>
-                    <a href="products.html">Classes</a>
-                    <a href="workouts.html">Workouts</a>
-                    <a href="nutrition.html">Nutrition</a>
-                    <a href="challenge.html">Challenge</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2024 FitLife.</p>
-                </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 FitLife.</p>
             </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
+</body>
 </html>
