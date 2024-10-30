@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,24 +35,34 @@
                 color: #2C4EB8;
             }
 
-            /* Banner Section */
+            /* Banner Section - Fix for Full Coverage */
             .banner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
                 background-image: url('bgContact.webp');
-                background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                padding: 100px 20px;
+                background-repeat: no-repeat;
+                height: 300px; /* Set a fixed height */
+                width: 100%; /* Ensure it takes the full width */
+                padding: 20px;
                 text-align: center;
                 color: white;
+                position: relative;
             }
 
+            /* Ensure banner content fits correctly */
             .banner h2 {
                 font-size: 48px;
                 margin-bottom: 10px;
+                word-break: break-word; /* Ensure long words break correctly */
             }
 
             .banner p {
                 font-size: 20px;
+                margin-top: 0;
             }
 
             /* Contact Form Section */
@@ -75,8 +85,7 @@
             }
 
             .ContactBlock h2 {
-                margin-top: -10px;
-                font-size: 40px;
+                font-size: 36px;
                 margin-bottom: 20px;
                 color: #000;
             }
@@ -167,7 +176,8 @@
                 }
 
                 .banner {
-                    padding: 60px 10px;
+                    height: 250px;
+                    padding: 10px;
                 }
 
                 .ContactBlock h2 {
