@@ -3,18 +3,66 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Contact Us | FitLife</title>
+        <meta name="description" content="Contact FitLife for any inquiries about our classes, workouts, or challenges.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="GeneralStyle.css">
         <style>
+            /* General Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Header Styling */
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fff;
+                padding: 10px 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            nav a {
+                text-decoration: none;
+                margin: 0 10px;
+                color: #3D68FA;
+            }
+
+            nav a:hover {
+                color: #2C4EB8;
+            }
+
+            /* Banner Section */
+            .banner {
+                background-image: url('bgContact.webp');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                padding: 100px 20px;
+                text-align: center;
+                color: white;
+            }
+
+            .banner h2 {
+                font-size: 48px;
+                margin-bottom: 10px;
+            }
+
+            .banner p {
+                font-size: 20px;
+            }
+
+            /* Contact Form Section */
             .Outline {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 40px 0;
-                margin: 40px auto; 
-                max-width: 1000px;
+                padding: 40px 20px;
+                margin: 20px auto;
+                max-width: 800px;
             }
 
             .ContactBlock {
@@ -22,22 +70,22 @@
                 padding: 30px;
                 border-radius: 10px;
                 width: 100%;
-                max-width: 500px; 
                 text-align: center;
-                color: #3D68FA; 
+                color: #3D68FA;
             }
 
             .ContactBlock h2 {
-                margin-top: -20px;
-                font-size: 50px; 
+                margin-top: -10px;
+                font-size: 40px;
                 margin-bottom: 20px;
                 color: #000;
             }
 
             label {
                 display: block;
-                font-size: 20px;
+                font-size: 18px;
                 margin-bottom: 5px;
+                text-align: left;
             }
 
             input[type="text"],
@@ -45,40 +93,93 @@
             input[type="tel"],
             textarea {
                 width: 100%;
-                padding: 10px;
+                padding: 12px;
                 margin-bottom: 15px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 font-size: 16px;
-                box-sizing: border-box; 
             }
 
             button {
                 width: 100%;
                 padding: 12px;
                 font-size: 16px;
-                background-color: #3D68FA; 
-                color: #FFFFFF;
+                background-color: #3D68FA;
+                color: white;
                 border: none;
                 border-radius: 5px;
+                cursor: pointer;
             }
 
             button:hover {
-                background-color: #2C4EB8; 
+                background-color: #2C4EB8;
             }
 
-            body {
-                background-image: url('bgContact.webp');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
+            /* Footer Section */
+            .footer {
+                background-color: #3D68FA;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+            .footer a {
+                color: white;
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+            .footer a:hover {
+                text-decoration: underline;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .banner h2 {
+                    font-size: 36px;
+                }
+
+                .banner p {
+                    font-size: 18px;
+                }
+
+                .ContactBlock h2 {
+                    font-size: 32px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                textarea {
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .header-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                nav a {
+                    margin: 5px 0;
+                }
+
+                .banner {
+                    padding: 60px 10px;
+                }
+
+                .ContactBlock h2 {
+                    font-size: 28px;
+                }
             }
         </style>
     </head>
     <body>
         <!-- Header Section -->
         <header class="header-container">
-            <h1><a href="Home.html">FitLife</a></h1>
+            <h1><a href="home.html">FitLife</a></h1>
             <nav>
                 <a href="aboutus.html">About Us</a>
                 <a href="products.html">Classes</a>
@@ -91,31 +192,29 @@
 
         <!-- Banner Section -->
         <section class="banner">
-            <div class="banner-text">
-                <h2>Contact Us</h2>
-                <p>Message us with any question you may have</p>
-            </div>
+            <h2>Contact Us</h2>
+            <p>Message us with any question you may have</p>
         </section>
 
         <!-- Contact Section -->
         <div class="Outline">
             <div class="ContactBlock">
                 <h2>Send Us a Message</h2>
-                <form action="#" method="POST"> 
-                    <label for="fname">First Name: </label>
-                    <input type="text" id="fname" name="fname" required><br><br>
+                <form action="#" method="POST">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
 
-                    <label for="lname">Last Name: </label>
-                    <input type="text" id="lname" name="lname" required><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required>
 
-                    <label for="email">E-mail: </label>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
 
-                    <label for="phone">Phone Number: </label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
 
-                    <label for="message">Message: </label>
-                    <textarea id="message" name="message" rows="5" cols="50" required></textarea><br><br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
                     <button type="submit">Submit</button>
                 </form>
@@ -124,19 +223,7 @@
 
         <!-- Footer Section -->
         <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-nav">
-                    <a href="aboutus.html">About Us</a>
-                    <a href="products.html">Classes</a>
-                    <a href="workouts.html">Workouts</a>
-                    <a href="nutrition.html">Nutrition</a>
-                    <a href="challenge.html">Challenge</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2024 FitLife.</p>
-                </div>
-            </div>
+            <p>&copy; 2024 FitLife. All Rights Reserved.</p>
         </footer>
     </body>
 </html>
