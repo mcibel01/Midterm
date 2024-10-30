@@ -8,21 +8,116 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header Font */
-h1 {
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 5vw;  /* Scales with screen width */
-    margin: 0;
+/* Header Navigation and Hamburger Menu */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-container h1 a {
-    color: inherit;
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    nav {
+        display: none; /* Hide nav links initially */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav.show {
+        display: flex; /* Show links when the menu is toggled */
+    }
+
+    nav a {
+        padding: 10px;
+        width: 100%; /* Full width for links on small screens */
+        text-align: center;
+    }
+}
+
+nav a {
     text-decoration: none;
+    color: #3D68FA;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 50px;
 }
 
-/* Button Styles */
+nav a:hover {
+    color: #4FC3F7;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    height: 300px;
+    background-image: url('lifting.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    font-size: 6vw; /* Scales with screen width */
+    color: #FFFFFF;
+}
+
+.banner p {
+    font-size: 3.5vw;
+    color: #efefef;
+}
+
+/* Main Content Styling */
+.main {
+    padding: 40px 10px;
+    text-align: center;
+    flex: 1;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
 .button {
     display: inline-block;
     padding: 12px 30px;
@@ -41,201 +136,67 @@ h1 {
     background-color: #4FC3F7;
 }
 
-/* Flex Containers */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* NAVIGATION */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;  /* Ensure navigation links wrap on smaller screens */
-}
-
-nav a {
-    text-decoration: none;
-    color: #3D68FA;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 50px;
-}
-
-nav a:hover {
-    color: #4FC3F7;
-}
-
-/* MAIN CONTENT */
-.main {
-    padding: 40px;
-    text-align: center;
-    flex: 1;
-}
-
-.about-us h2 {
-    text-align: center;
-    margin-top: -10px;
-    font-size: 45px;
-}
-
-.about-us {
-    padding: 20px;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 1000px;
-}
-
-.about-us p {
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.workouts {
-    margin: 20px 0;
-}
-
-.workouts h2 {
-    text-align: center;
-    font-size: 45px;
-    margin-top: -5px;
-}
-
+/* Workout Cards */
 .workout-cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
     gap: 20px;
-    flex-wrap: wrap;  /* Makes cards stack on smaller screens */
 }
 
 .card {
-    background-color: #3D68FA;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;  /* Flexible width */
-    max-width: 200px;  /* Ensures cards don’t grow too large */
-}
-
-.card h3 {
-    font-size: 30px;
-    color: #FFFFFF;
-}
-
-.card p {
-    font-size: 15px;
-    color: #FFFFFF;
-}
-
-/* Nutrition Section */
-.nutrition {
-    padding: 20px;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 1000px;
-}
-
-.nutrition-content {
-    display: flex;
-    flex-wrap: wrap; /* Stack elements on smaller screens */
-    gap: 20px;
-    align-items: center;
-}
-
-.nutrition-text {
-    flex: 1;
-}
-
-.nutrition h2 {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 45px;
-}
-
-.nutrition-text li {
-    font-size: 19px;
-    margin-bottom: 10px;
-}
-
-.nutrition-image {
-    flex: 1;
-    max-width: 300px;
-}
-
-.nutrition-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Products Section */
-.products {
-    padding: 20px;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-.product-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;  /* Ensure cards wrap */
-}
-
-.product-card {
-    background-color: #3D68FA;
+    background-color: #EFEFEF;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: 100%;  /* Flexible width */
-    max-width: 220px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Flexible width */
+    max-width: 300px;
+    margin-bottom: 15px;
 }
 
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.card h3 {
+    font-size: 24px;
+    color: #000;
 }
 
-/* Banner Section */
-.banner {
-    background-image: url('lifting.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    min-height: 200px;
-    padding: 40px 10px;
+.card p {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Form and Calculator Styling */
+.nutrition-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 20px;
 }
 
-.banner h2 {
-    font-size: 8vw;  /* Scales with screen width */
-    color: #FFFFFF;
+@media only screen and (max-width: 768px) {
+    .nutrition-content {
+        flex-direction: column; /* Stack form elements on small screens */
+        align-items: center;
+    }
+
+    form input, form select, form button {
+        width: 100%; /* Full width inputs */
+        max-width: 300px;
+        margin: 10px 0;
+    }
 }
 
-.banner p {
-    font-size: 4vw;
-    color: #efefeff3;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#result {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #3D68FA;
 }
 
 /* Footer Section */
@@ -251,7 +212,7 @@ nav a:hover {
     display: flex;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;  /* Ensure navigation wraps */
+    flex-wrap: wrap;
 }
 
 .footer-nav a {
@@ -260,56 +221,19 @@ nav a:hover {
     font-size: 16px;
 }
 
-/* Call to Action Section */
-.cta-container {
-    background-color: #EFEFEF;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 1000px;
-    text-align: center;
+.footer-nav a:hover {
+    color: #4FC3F7;
 }
 
-#cta-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+.footer-copy {
+    margin-top: 5px;
+    font-size: 12px;
 }
 
-#cta-email {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 1024px) {
-    nav a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-}
-
+/* Responsive Typography Adjustments */
 @media only screen and (max-width: 768px) {
-    .workout-cards, .product-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nutrition-content {
-        flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    nav a {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-
     h1 {
-        font-size: 24px;
+        font-size: 5vw;
     }
 
     .banner h2 {
@@ -317,6 +241,6 @@ nav a:hover {
     }
 
     .banner p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 }
