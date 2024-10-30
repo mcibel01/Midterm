@@ -7,36 +7,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="GeneralStyle.css">
         <style>
-            .outline {
-                background-color: rgb(179, 227, 211);
-                outline: 5px solid rgb(50, 83, 83);
-                width: 350px;
-                height: 350px;
-                margin: auto;
-            }
+            /* Page-Specific Styles for Nutrition */
             .blog-container {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 20px;
-                margin: 20px;
+                gap: 30px;
+                padding: 40px 20px;
+                background-color: #ffffff;
             }
-            .blog {
-                background-color: rgb(179, 227, 211);
+
+            .blog-card {
+                background-color: #f4f4f4;
                 width: 300px;
-                height: 300px;
-                margin: 20px;
-                text-align: left;
-                color: rgb(50, 83, 83);
-                font-size: 30px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                transition: opacity 0.3s ease;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                padding: 20px;
             }
-            .blog:hover {
-                opacity: 0.5;
+
+            .blog-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
-            h5 {
+
+            .blog-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+
+            .blog-card h5 {
+                margin: 15px 0;
+                font-size: 22px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .blog-card p {
+                font-size: 16px;
+                color: #666;
+            }
+
+            .banner {
+                position: relative;
+                background-image: url('nutrition-banner.jpg'); /* Replace with correct image path */
+                background-size: cover;
+                background-position: center;
+                height: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+            }
+
+            .banner h2 {
+                font-size: 48px;
+                margin: 0;
+                font-weight: bold;
+            }
+
+            .banner p {
                 font-size: 20px;
+                margin-top: 10px;
             }
         </style>
     </head>
@@ -58,41 +95,32 @@
         <section class="banner">
             <div class="banner-text">
                 <h2>Nutrition</h2>
-                <p>Read all about some nutrition tips</p>
+                <p>Discover expert tips to fuel your fitness journey</p>
             </div>
         </section>
 
         <div class="heading">
-            <h1>Blog</h1>
+            <h1>Our Nutrition Blog</h1>
         </div>
 
         <!-- Blog Section -->
         <div class="blog-container">
-            <div class="outline">
-                <a href="a1.html">
-                    <div class="blog">
-                        <img src="bgContact.webp" alt="image" class="image" />
-                        <h5>The Foundation of Nutrition for a Healthy Lifestyle</h5>
-                    </div>
-                </a>
+            <div class="blog-card">
+                <img src="bgContact.webp" alt="Nutrition blog image">
+                <h5>The Foundation of Nutrition for a Healthy Lifestyle</h5>
+                <p>Learn how to build a balanced diet that fuels your body.</p>
             </div>
 
-            <div class="outline">
-                <a href="a2.html">
-                    <div class="blog">
-                        <img src="bgContact.webp" alt="image" class="image" />
-                        <h5>Fitness: The Path to a Healthier You</h5>
-                    </div>
-                </a>
+            <div class="blog-card">
+                <img src="bgContact.webp" alt="Fitness blog image">
+                <h5>Fitness: The Path to a Healthier You</h5>
+                <p>Explore how fitness and nutrition go hand-in-hand.</p>
             </div>
 
-            <div class="outline">
-                <a href="a3.html">
-                    <div class="blog">
-                        <img src="bgContact.webp" alt="image" class="image" />
-                        <h5>Integrating Nutrition and Fitness for Optimal Health</h5>
-                    </div>
-                </a>
+            <div class="blog-card">
+                <img src="bgContact.webp" alt="Health blog image">
+                <h5>Integrating Nutrition and Fitness for Optimal Health</h5>
+                <p>Discover the synergy between nutrition and exercise.</p>
             </div>
         </div>
 
