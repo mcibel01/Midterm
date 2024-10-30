@@ -8,14 +8,61 @@
     <link rel="stylesheet" href="GeneralStyle.css">
 
     <style>
-        .card{
+        .card {
             background-color: #EFEFEF;
+            margin-bottom: 15px;
         }
-        .card p, .card h3{
+        .card p, .card h3 {
             color: #000;
         }
-        .nutrition-text{
+        .nutrition-text {
             font-size: 29px;
+        }
+
+        /* Mobile-Friendly Navigation */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack links */
+                gap: 5px;
+            }
+            nav a {
+                padding: 6px 10px; /* Smaller padding */
+            }
+        }
+
+        /* Mobile-Friendly Workout Cards */
+        @media only screen and (max-width: 768px) {
+            .workout-cards {
+                flex-direction: column; /* Stack cards vertically */
+                align-items: center;
+            }
+            .card {
+                width: 100%; /* Full width */
+                max-width: 300px; /* Limit size */
+            }
+        }
+
+        /* Mobile-Friendly Form */
+        @media only screen and (max-width: 768px) {
+            .nutrition-content {
+                flex-direction: column; /* Stack form elements */
+                align-items: center;
+            }
+            form input, form select, form button {
+                width: 100%; /* Full width inputs */
+                max-width: 300px;
+                margin: 5px 0;
+            }
+        }
+
+        /* Responsive Banner */
+        @media only screen and (max-width: 768px) {
+            .banner h2 {
+                font-size: 6vw;
+            }
+            .banner p {
+                font-size: 4vw;
+            }
         }
     </style>
 </head>
@@ -101,7 +148,6 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-        <!-- Footer Navigation Links -->
             <div class="footer-nav">
                 <a href="aboutus.html">About Us</a>
                 <a href="products.html">Classes</a>
@@ -110,8 +156,6 @@
                 <a href="challenge.html">Challenge</a>
                 <a href="contact.html">Contact</a>
             </div>
-
-            <!-- Copyright Info -->
             <div class="footer-copy">
                 <p>&copy; 2024 FitLife.</p>
             </div>
