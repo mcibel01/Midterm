@@ -9,19 +9,19 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-  
+
 /* Header Font */
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 36px;
+    font-size: 5vw;  /* Scales with screen width */
     margin: 0;
-} 
+}
 
 .header-container h1 a {
-    color: inherit;         
-    text-decoration: none;  
+    color: inherit;
+    text-decoration: none;
 }
-  
+
 /* Button Styles */
 .button {
     display: inline-block;
@@ -36,37 +36,38 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-  
+
 .button:hover {
     background-color: #4FC3F7;
 }
-  
+
 /* Flex Containers */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;          
-    width: 100%;     
-    background-color: #FFFFFF;  
-    z-index: 1000;    
-    padding: 10px 0;  
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1000;
+    padding: 10px 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-  
+
 .flex-container {
     display: flex;
     justify-content: space-between;
 }
-  
+
 /* NAVIGATION */
 nav {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;  /* Ensure navigation links wrap on smaller screens */
 }
-  
+
 nav a {
     text-decoration: none;
     color: #3D68FA;
@@ -74,31 +75,31 @@ nav a {
     padding: 10px 15px;
     border-radius: 50px;
 }
-  
+
 nav a:hover {
     color: #4FC3F7;
 }
-  
-/* MAIN CONTENT STYLING */
+
+/* MAIN CONTENT */
 .main {
     padding: 40px;
     text-align: center;
     flex: 1;
 }
 
-.about-us h2{
+.about-us h2 {
     text-align: center;
     margin-top: -10px;
     font-size: 45px;
 }
-  
+
 .about-us {
     padding: 20px;
     border-radius: 10px;
-    margin-top: 40px;
     margin: 40px auto;
-    max-width: 1000px; 
+    max-width: 1000px;
 }
+
 .about-us p {
     margin-bottom: 10px;
     font-size: 22px;
@@ -108,7 +109,7 @@ nav a:hover {
     margin: 20px 0;
 }
 
-.workouts h2{
+.workouts h2 {
     text-align: center;
     font-size: 45px;
     margin-top: -5px;
@@ -118,14 +119,16 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;  /* Makes cards stack on smaller screens */
 }
-  
+
 .card {
     background-color: #3D68FA;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 100%;  /* Flexible width */
+    max-width: 200px;  /* Ensures cards don’t grow too large */
 }
 
 .card h3 {
@@ -138,36 +141,29 @@ nav a:hover {
     color: #FFFFFF;
 }
 
-/* Nutrition Section Styling */
+/* Nutrition Section */
 .nutrition {
     padding: 20px;
     border-radius: 10px;
     margin: 40px auto;
-    max-width: 1000px; 
+    max-width: 1000px;
 }
 
 .nutrition-content {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Stack elements on smaller screens */
+    gap: 20px;
     align-items: center;
-    gap: 20px; 
 }
 
 .nutrition-text {
-    flex: 1; 
+    flex: 1;
 }
 
 .nutrition h2 {
     margin-bottom: 30px;
-    margin-top: 10px;
     text-align: center;
     font-size: 45px;
-}
-
-.nutrition-text ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-    margin: 0;
 }
 
 .nutrition-text li {
@@ -176,8 +172,8 @@ nav a:hover {
 }
 
 .nutrition-image {
-    flex: 0.5; 
-    max-width: 3  00px; 
+    flex: 1;
+    max-width: 300px;
 }
 
 .nutrition-image img {
@@ -186,37 +182,20 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .nutrition-content {
-        flex-direction: column; 
-    }
-
-    .nutrition-image {
-        margin-top: 20px;
-    }
-}
-
 /* Products Section */
 .products {
     padding: 20px;
     border-radius: 10px;
-    margin: 40px auto;       
+    margin: 40px auto;
     max-width: 800px;
-    text-align: center; 
-}
-
-.products h2{
     text-align: center;
-    font-size: 45px;
-    margin-top: -5px;
 }
 
 .product-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;      
+    flex-wrap: wrap;  /* Ensure cards wrap */
 }
 
 .product-card {
@@ -224,7 +203,8 @@ nav a:hover {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: 220px;
+    width: 100%;  /* Flexible width */
+    max-width: 220px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -234,96 +214,44 @@ nav a:hover {
     border-radius: 5px;
 }
 
-.product-card h3 {
-    font-size: 20px;
-    margin: 10px 0 5px;
-    color: #FFFFFF;
-}
-
-/* RESPONSIVE SCREENS */
-@media only screen and (max-width: 1024px) {
-    nav a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-}
-  
-@media only screen and (max-width: 768px) {
-    nav a {
-        font-size: 11px;
-        padding: 6px 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-}
-  
-@media only screen and (max-width: 480px) {
-    nav a {
-        font-size: 8px;
-        padding: 4px 8px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-}
-
-/* BANNER SECTION */
+/* Banner Section */
 .banner {
-    background-image: url('lifting.jpeg'); 
+    background-image: url('lifting.jpeg');
     background-size: cover;
     background-position: center;
-    height: 350px; 
+    height: auto;
+    min-height: 200px;
+    padding: 40px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
-    margin-top: -20px; 
 }
 
 .banner h2 {
+    font-size: 8vw;  /* Scales with screen width */
     color: #FFFFFF;
-    font-size: 120px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; 
 }
 
 .banner p {
+    font-size: 4vw;
     color: #efefeff3;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; 
-    margin-top: -110px;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #3D68FA; 
+    background-color: #3D68FA;
     color: #FFFFFF;
     padding: 15px 0;
     text-align: center;
-    margin-top: auto; 
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; 
+    margin-top: auto;
 }
 
 .footer-nav {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;  /* Ensure navigation wraps */
 }
 
 .footer-nav a {
@@ -332,74 +260,63 @@ nav a:hover {
     font-size: 16px;
 }
 
-.footer-nav a:hover {
-    color: #4FC3F7; 
-}
-
-.footer-copy {
-    margin-top: -5px;
-    font-size: 12px;
-}
-
-/* Call to Action Container */
+/* Call to Action Section */
 .cta-container {
     background-color: #EFEFEF;
     padding: 20px;
     border-radius: 10px;
     margin: 40px auto;
     max-width: 1000px;
-}
-
-/* Call to Action Section Styling */
-.cta-section {
-    padding: 40px;
     text-align: center;
-    border-radius: 10px;
-}
-
-.cta-section h2 {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-.cta-section p {
-    font-size: 20px;
-    margin-bottom: 20px;
 }
 
 #cta-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
 #cta-email {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
+    width: 100%;
     max-width: 300px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-#success-message {
-    font-size: 18px;
-    color: #3D68FA; 
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 }
 
-button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #FFFFFF;
-    color: #3D68FA;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+@media only screen and (max-width: 768px) {
+    .workout-cards, .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutrition-content {
+        flex-direction: column;
+    }
 }
 
-button:hover {
-    background-color: #4FC3F7;
-    color: #FFFFFF;
+@media only screen and (max-width: 480px) {
+    nav a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .banner h2 {
+        font-size: 6vw;
+    }
+
+    .banner p {
+        font-size: 3vw;
+    }
 }
