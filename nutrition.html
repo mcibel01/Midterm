@@ -23,9 +23,9 @@
                 border-radius: 10px;
                 overflow: hidden;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                text-align: center;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                padding: 20px;
+                text-align: center;
+                cursor: pointer;
             }
 
             .blog-card:hover {
@@ -47,14 +47,9 @@
                 color: #333;
             }
 
-            .blog-card p {
-                font-size: 16px;
-                color: #666;
-            }
-
             .banner {
                 position: relative;
-                background-image: url('nutrition-banner.jpg'); /* Replace with correct image path */
+                background-image: url('nutrition-banner.jpg'); /* Replace with the correct image path */
                 background-size: cover;
                 background-position: center;
                 height: 350px;
@@ -74,6 +69,11 @@
             .banner p {
                 font-size: 20px;
                 margin-top: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
             }
         </style>
     </head>
@@ -105,26 +105,26 @@
 
         <!-- Blog Section -->
         <div class="blog-container">
-            <div class="blog-card">
-                <a href="a1.html">
+            <a href="a1.html" target="_blank">
+                <div class="blog-card">
                     <img src="bgContact.webp" alt="Nutrition blog image">
                     <h5>The Foundation of Nutrition for a Healthy Lifestyle</h5>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="blog-card">
-                <a href="a2.html">
+            <a href="a2.html" target="_blank">
+                <div class="blog-card">
                     <img src="bgContact.webp" alt="Fitness blog image">
                     <h5>Fitness: The Path to a Healthier You</h5>
-                </a>
-            </div>
+                </div>
+            </a>
 
-            <div class="blog-card">
-                <a href="a3.html">
+            <a href="a3.html" target="_blank">
+                <div class="blog-card">
                     <img src="bgContact.webp" alt="Health blog image">
                     <h5>Integrating Nutrition and Fitness for Optimal Health</h5>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
 
         <footer class="footer">
@@ -152,4 +152,3 @@
         </script>
     </body>
 </html>
-
