@@ -1,4 +1,4 @@
-// Function to filter workout plans by level
+// filter workout plans by level
 function filterPlans(level) {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
@@ -10,7 +10,7 @@ function filterPlans(level) {
     });
 }
 
-// Function to calculate the ideal workout plan
+// calculate the ideal workout plan
 function calculateWorkoutPlan() {
     const age = parseInt(document.getElementById('age').value);
     const weight = parseInt(document.getElementById('weight').value);
@@ -28,5 +28,5 @@ function calculateWorkoutPlan() {
     }
 
     document.getElementById('result').innerText = result;
-    return false;  // Prevent form submission
+    return false;  // dont allow form submission
 }
