@@ -315,6 +315,10 @@ nav a:hover {
     margin-top: -110px;
 }
 @media (max-width: 768px) {
+     .banner {
+        height: 300px; /* Adjust height for mobile */
+        padding: 10px;
+    }
     .banner-content h2 {
         font-size: 40px; /* Smaller font size for tablet and mobile screens */
     }
@@ -323,6 +327,10 @@ nav a:hover {
     }
 }
 @media (max-width: 480px) {
+     .banner {
+        height: 250px; /* Further adjustment for smaller mobile screens */
+    }
+
     .banner-content h2 {
         font-size: 30px; /* Even smaller font size for small mobile screens */
     }
