@@ -332,10 +332,10 @@ nav a:hover {
     .banner {
         min-height: 250px;
     }
-    .banner h2 {
+    .banner-content h2 {
         font-size: 35px;
     }
-    .banner p {
+    .banner-content p {
         font-size: 24px;
     }
 }
