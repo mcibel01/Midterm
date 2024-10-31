@@ -333,7 +333,7 @@ nav a:hover {
 @media only screen and (max-width: 600px) {
     .banner {
         min-height: 250px;
-        margin-top: -35px; 
+        margin-top: -40px; 
     }
     .banner-content h2 {
         font-size: 60px;
