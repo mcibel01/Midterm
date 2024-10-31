@@ -317,7 +317,6 @@ nav a:hover {
     font-size: 120px;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
-    order: 1;
 }
 
 .banner p {
@@ -326,24 +325,18 @@ nav a:hover {
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
     margin-top: -110px;
-    order: 2;
-}
-@media (max-width: 768px) {
-    .banner {
-        min-height: 300px;
-    }
-    .banner h2 {
-        font-size: 40px;
-    }
-    .banner p {
-        font-size: 26px;
-    }
 }
 
-/* Mobile View - Adjust sizes for screen widths 480px or smaller */
+/* Mobile View */
 @media (max-width: 480px) {
     .banner {
         min-height: 250px;
+    }
+    .banner-content h2 {
+    order: 1;
+    }
+    .banner-content p {
+    order: 2;
     }
     .banner h2 {
         font-size: 30px; 
