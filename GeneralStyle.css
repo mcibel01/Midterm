@@ -328,15 +328,15 @@ nav a:hover {
 }
 
 /* Mobile View */
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .banner {
         min-height: 250px;
     }
-    .banner h2 {
+    .banner-content h2 {
         font-size: 35px;
     }
-    .banner p {
-        font-size: 24px;
+    .banner-content p {
+        font-size: 20px;
     }
 }
 /* Footer Section */
