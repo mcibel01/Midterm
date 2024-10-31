@@ -317,6 +317,7 @@ nav a:hover {
     font-size: 110px;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
+    margin-bottom: 20px;
 }
 
 .banner p {
@@ -324,7 +325,7 @@ nav a:hover {
     font-size: 38px;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
-    margin-top: 15px;
+    margin-top: 25px;
     
 }
 
