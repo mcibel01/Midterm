@@ -275,6 +275,17 @@ nav a:hover {
     }
 }
 
+@media only screen and (max-width: 460px) {
+    nav a {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+}
+
 /* BANNER SECTION */
 .banner {
     background-image: url('lifting.jpeg'); 
