@@ -291,45 +291,58 @@ nav a:hover {
     background-image: url('lifting.jpeg'); 
     background-size: cover;
     background-position: center;
-    height: 350px; 
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
+    height: 350px; /* Set standard height for desktop */
+    width: 100%; /* Ensure full-width banner */
 }
+
 .banner-content {
     color: #FFFFFF;
 }
+
 .banner-content h2 {
-    font-size: 120px;
+    font-size: 100px;
     font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; 
-    line height: 1.0;
+    line-height: 1.1;
 }
 
 .banner-content p {
-    color: #efefeff3;
     font-size: 40px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; 
+    color: #efefeff3;
     margin-top: -10px;
 }
 
-@media (max-width: 768px) {
-    .banner-content h2 {
-        font-size: 20px;
+/* Adjust for Tablet */
+@media only screen and (max-width: 768px) {
+    .banner {
+        height: 300px; /* Minimum height for tablets */
     }
+
+    .banner-content h2 {
+        font-size: 50px;
+    }
+
     .banner-content p {
-        font-size: 14px; 
+        font-size: 24px;
     }
 }
-@media (max-width: 480px) {
-    .banner-content h2 {
-        font-size: 18px;
+
+/* Adjust for Small Mobile */
+@media only screen and (max-width: 480px) {
+    .banner {
+        height: 250px; /* Minimum height for small mobile */
     }
+
+    .banner-content h2 {
+        font-size: 30px;
+    }
+
     .banner-content p {
-        font-size: 12px; /* Adjusted for small mobile screens */
+        font-size: 18px;
     }
 }
 /* Footer Section */
