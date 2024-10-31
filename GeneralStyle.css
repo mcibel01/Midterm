@@ -316,23 +316,25 @@ nav a:hover {
 }
 @media (max-width: 768px) {
      .banner {
-        height: 300px; /* Adjust height for mobile */
+        height: 300px;
         padding: 10px;
     }
     .banner-content h2 {
-        font-size: 30px; /* Smaller font size for tablet and mobile screens */
+        font-size: 30px;
+        line-height: 1.1;
     }
     .banner-content p {
-        font-size: 18px; /* Adjust paragraph font size for smaller screens */
+        font-size: 18px; 
     }
 }
 @media (max-width: 480px) {
      .banner {
-        height: 250px; /* Further adjustment for smaller mobile screens */
+        height: 250px;
     }
 
     .banner-content h2 {
-        font-size: 24px; /* Even smaller font size for small mobile screens */
+        font-size: 24px;
+        line-height: 1.1;
     }
     .banner-content p {
         font-size: 16px; /* Adjusted for small mobile screens */
