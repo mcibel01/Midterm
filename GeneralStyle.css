@@ -297,47 +297,45 @@ nav a:hover {
     align-items: center;
     position: relative;
     text-align: center;
-    margin-top: -20px; 
 }
-
-.banner h2 {
+.banner-content {
     color: #FFFFFF;
+}
+.banner-content h2 {
     font-size: 120px;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
+    line height: 1.2;
 }
 
-.banner p {
+.banner-content p {
     color: #efefeff3;
     font-size: 40px;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
-    margin-top: -110px;
+    margin-top: -10px;
 }
+
 @media (max-width: 768px) {
      .banner {
         height: 300px;
-        padding: 10px;
     }
     .banner-content h2 {
-        font-size: 26px;
-        line-height: 1.1;
+        font-size: 30px;
     }
     .banner-content p {
-        font-size: 16px; 
+        font-size: 24px; 
     }
 }
 @media (max-width: 480px) {
      .banner {
         height: 250px;
     }
-
     .banner-content h2 {
-        font-size: 22px;
-        line-height: 1.1;
+        font-size: 24px;
     }
     .banner-content p {
-        font-size: 12px; /* Adjusted for small mobile screens */
+        font-size: 16px; /* Adjusted for small mobile screens */
     }
 }
 /* Footer Section */
