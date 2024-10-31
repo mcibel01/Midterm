@@ -253,6 +253,7 @@ nav a:hover {
     }
     footer-nav a {
         font-size: 14px;
+        padding: 8px 12px;
     }
 }
   
@@ -266,7 +267,8 @@ nav a:hover {
         font-size: 24px;
     }
     footer-nav a {
-        font-size: 12px;
+        font-size: 11px;
+        padding: 6px 10px;
     }
 }
   
@@ -280,7 +282,8 @@ nav a:hover {
         font-size: 15px;
     }
     footer-nav a {
-        font-size: 10px;
+        font-size: 8px;
+        padding: 4px 8px;
     }
 }
 
@@ -294,7 +297,8 @@ nav a:hover {
         font-size: 14px;
     }
     footer-nav a {
-        font-size: 10px;
+        font-size: 8px;
+        padding: 4px 8px;
     }
 }
 
