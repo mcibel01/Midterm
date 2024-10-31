@@ -291,60 +291,30 @@ nav a:hover {
     background-image: url('lifting.jpeg'); 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    height: 350px; 
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     text-align: center;
-    height: 350px; /* Set standard height for desktop */
-    width: 100%; /* Ensure full-width banner */
+    margin-top: -20px; 
 }
 
-.banner-content {
+.banner h2 {
     color: #FFFFFF;
-}
-
-.banner-content h2 {
-    font-size: 100px;
+    font-size: 120px;
     font-weight: bold;
-    line-height: 1.1;
+    font-family: 'Trebuchet MS', sans-serif; 
 }
 
-.banner-content p {
-    font-size: 40px;
+.banner p {
     color: #efefeff3;
-    margin-top: -10px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif; 
+    margin-top: -110px;
 }
 
-/* Adjust for Tablet */
-@media only screen and (max-width: 768px) {
-    .banner {
-        height: 300px; /* Minimum height for tablets */
-    }
-
-    .banner-content h2 {
-        font-size: 50px;
-    }
-
-    .banner-content p {
-        font-size: 24px;
-    }
-}
-
-/* Adjust for Small Mobile */
-@media only screen and (max-width: 480px) {
-    .banner {
-        height: 250px; /* Minimum height for small mobile */
-    }
-
-    .banner-content h2 {
-        font-size: 30px;
-    }
-
-    .banner-content p {
-        font-size: 18px;
-    }
-}
 /* Footer Section */
 .footer {
     background-color: #3D68FA; 
