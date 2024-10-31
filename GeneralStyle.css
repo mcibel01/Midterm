@@ -314,7 +314,22 @@ nav a:hover {
     font-family: 'Trebuchet MS', sans-serif; 
     margin-top: -110px;
 }
-
+@media (max-width: 768px) {
+    .banner-content h2 {
+        font-size: 40px; /* Smaller font size for tablet and mobile screens */
+    }
+    .banner-content p {
+        font-size: 18px; /* Adjust paragraph font size for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .banner-content h2 {
+        font-size: 30px; /* Even smaller font size for small mobile screens */
+    }
+    .banner-content p {
+        font-size: 16px; /* Adjusted for small mobile screens */
+    }
+}
 /* Footer Section */
 .footer {
     background-color: #3D68FA; 
