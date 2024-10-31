@@ -291,13 +291,13 @@ nav a:hover {
     background-image: url('lifting.jpeg'); 
     background-size: cover;
     background-position: center;
-    height: 350px; 
+    min-height: 350px; 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
-    margin-top: -20px; 
+    padding: 20px; 
 }
 
 .banner h2 {
@@ -313,6 +313,34 @@ nav a:hover {
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif; 
     margin-top: -110px;
+}
+@media (max-width: 768px) {
+    .banner {
+        min-height: 300px; /* Smaller height for tablets */
+    }
+
+    .banner h2 {
+        font-size: 50px; /* Smaller heading size */
+    }
+
+    .banner p {
+        font-size: 20px; /* Smaller paragraph size */
+    }
+}
+
+/* Mobile View - Adjust sizes for screen widths 480px or smaller */
+@media (max-width: 480px) {
+    .banner {
+        min-height: 250px; /* Even smaller height for mobile */
+    }
+
+    .banner h2 {
+        font-size: 30px; /* Further reduced heading size */
+    }
+
+    .banner p {
+        font-size: 16px; /* Further reduced paragraph size */
+    }
 }
 
 /* Footer Section */
