@@ -309,8 +309,7 @@ nav a:hover {
     align-items: center;
     position: relative;
     text-align: center;
-    margin-top: 0;
-    padding-top: 0; 
+    margin-top: -100; 
 }
 
 .banner h2 {
