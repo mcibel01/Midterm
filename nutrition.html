@@ -48,7 +48,7 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header class="header-container">
         <h1><a href="Home.html">FitLife</a></h1>
         <nav>
@@ -61,7 +61,7 @@
         </nav>
     </header>
 
-    <!-- Banner Section -->
+    <!-- Banner -->
     <section class="banner">
         <div class="banner-content">
             <h2>Nutrition</h2>
@@ -73,7 +73,7 @@
         <h2>Our Nutrition Blog</h2>
     </div>
 
-    <!-- Blog Section -->
+    <!-- Blog -->
     <div class="blog-container" id="blogContainer"></div>
 
     <!-- JavaScript -->
@@ -97,40 +97,36 @@
             }
         ];
 
-        // Function to render blog posts
+        // render blog posts
         const renderBlogPosts = () => {
             const blogContainer = document.getElementById('blogContainer');
 
             blogPosts.forEach(post => {
-                // Create the blog card element
                 const blogCard = document.createElement('div');
                 blogCard.classList.add('blog-card');
-
-                // Create link wrapper
                 const link = document.createElement('a');
                 link.href = post.link;
                 link.target = '_blank';
 
-                // Create image element
+                // Create image
                 const img = document.createElement('img');
                 img.src = post.image;
                 img.alt = `${post.title} image`;
 
-                // Create title element
+                // Create title
                 const title = document.createElement('h5');
                 title.textContent = post.title;
 
-                // Append elements to the card
                 blogCard.appendChild(img);
                 blogCard.appendChild(title);
                 link.appendChild(blogCard);
 
-                // Append card to the container
+
                 blogContainer.appendChild(link);
             });
         };
 
-        // Call the function to render blog posts
+        // render blog posts
         renderBlogPosts();
     </script>
 
