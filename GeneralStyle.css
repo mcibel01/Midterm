@@ -316,33 +316,28 @@ nav a:hover {
 }
 @media (max-width: 768px) {
     .banner {
-        min-height: 300px; /* Smaller height for tablets */
+        min-height: 300px;
     }
-
     .banner h2 {
-        font-size: 50px; /* Smaller heading size */
+        font-size: 30px;
     }
-
     .banner p {
-        font-size: 20px; /* Smaller paragraph size */
+        font-size: 16px;
     }
 }
 
 /* Mobile View - Adjust sizes for screen widths 480px or smaller */
 @media (max-width: 480px) {
     .banner {
-        min-height: 250px; /* Even smaller height for mobile */
+        min-height: 250px;
     }
-
     .banner h2 {
-        font-size: 30px; /* Further reduced heading size */
+        font-size: 24px; 
     }
-
     .banner p {
-        font-size: 16px; /* Further reduced paragraph size */
+        font-size: 14px;
     }
 }
-
 /* Footer Section */
 .footer {
     background-color: #3D68FA; 
