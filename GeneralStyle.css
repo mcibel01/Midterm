@@ -319,10 +319,10 @@ nav a:hover {
         min-height: 300px;
     }
     .banner h2 {
-        font-size: 30px;
+        font-size: 40px;
     }
     .banner p {
-        font-size: 16px;
+        font-size: 26px;
     }
 }
 
@@ -332,10 +332,10 @@ nav a:hover {
         min-height: 250px;
     }
     .banner h2 {
-        font-size: 24px; 
+        font-size: 30px; 
     }
     .banner p {
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 /* Footer Section */
